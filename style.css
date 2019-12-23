@@ -1,3 +1,21 @@
 body {
     padding: 15px;
 }
+.container {
+    margin: 0 auto;
+}
+@media only screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+    }
+}
+@media only screen and (min-width: 768px) {
+    .container {
+        width: 80%;
+    }
+}
+@media only screen and (min-width: 1920px) {
+    .container {
+        width: 40%;
+    }
+}
