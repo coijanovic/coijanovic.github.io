@@ -1,5 +1,11 @@
 body {
     padding: 15px;
+    background: #2E3440;
+    color: #ECEFF4;
+    font-family: Sans-Serif;
+}
+a {
+    color: #D8DEE9
 }
 .container {
     margin: 0 auto;
