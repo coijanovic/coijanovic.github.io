@@ -17,13 +17,13 @@
         <p>I run a small recipe blog that is hosted with <a href="github.io">Github Pages</a>. Today, I was checking which pages of the blog Google is indexing and noticed a suspicious search result (see first picture, fifth result).</p>
 
         <div class="figure">
-            <img width="50%" src="img/vks2.png" alt="Google Search Results" />
+            <img width="100%" src="img/vks2.png" alt="Google Search Results" />
         </div>
 
         <p>Upon closer inspection, I found out that a subdomain of mine was used to host a russian file sharing page (see second picture).</p>
 
         <div class="figure">
-            <img width="50%" src="img/vks1.png" alt="My domain, not my content" />
+            <img width="100%" src="img/vks1.png" alt="My domain, not my content" />
         </div>
         
         <h2>How is this possible?</h2>
@@ -34,8 +34,8 @@
 
         <p>
             This causes all requests for subdomains (e.g., <code>test.vollkornsaskia.de</code>) to be routed to GitHub's servers. 
-            If someone where to setup a GitHub page using an arbitrary subdomain of mine, GitHub would find that the DNS entry for this (sub)domain points to their server. 
-            The page is served for this domain, it even has a ssl certificate.
+            If someone were to set up a GitHub page using an arbitrary subdomain of mine, GitHub would find that the DNS entry for this (sub)domain points to their server. 
+            The page would be served for this domain, even with ssl certificate.
         </p>
 
         <h2>Solving the problem</h2>
