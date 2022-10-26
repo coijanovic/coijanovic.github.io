@@ -19,16 +19,39 @@
     
     <h2>Research Interests</h2>
     <p>
-        My main focus lies on creating formal privacy notions for group-based anonymous communication.
-        Once formal privacy goals have been established, present and future anonymous group communication networks can be analyzed.
+        My research is focused on anonymous group communication.
+        Anonymous communication aims to hide not only the <i>contents</i> of communication but also the <i>metadata</i> that occurs during communication.
+        Metadata includes information such as how often and with whom people communicate. 
+        To entities such as service providers and government surveillance agencies, metadata is often of greater interest than the actual message content.
     </p>
+
     <p>
-    I am also researching <em>anonymous publish/subscribe networks</em> in a joined project with the <a target="_blank" href="https://www.informatik.tu-darmstadt.de/telekooperation/telecooperation_group/index.en.jsp">Telecooperation Lab</a> at TU Darmstadt.
+    Anonymous one-to-one communication has been intensely studied since the early 1980s, both from a theoretical as well as practical perspective.
+    Group communication has received considerably less attention, although it is an indispensable feature of any (non-anonymous) popular communication platform (e.g., WhatsApp, Zoom, etc.).
+    Achieving anonymous group communication is especially challenging, as the amount of metadata that needs to be protected is strictly greater than in the one-to-one case.
+    Additional privacy-sensitive information includes group sizes and membership among others.
     </p>
-    <p>
-        During my master's thesis, I conducted a formal analysis of the anonymous communication network <em>Vuvuzela</em>, in which I found and fixed serious weaknesses against sender timing and replay attacks.
-        You can find the thesis <a target="_blank" href="doc/thesis.pdf">here</a>.
-    </p>
+
+    I explore the challenges of anonymous group communication from three different perspectives:
+    <ul>
+        <li>
+            <b>Adaption of Common Anonymous Communication Building Blocks.</b>
+            I investigate how common building blocks of anonymous communication, such as mix networks or Private Information Retrieval, can be adapted to support group communication.
+            If we can find generally applicable adaptions, a large number of existing anonymous communication networks can be extended to support group communication.
+        </li>
+        <li>
+            <b>Purpose-Build Anonymous Group Communication.</b>
+            In most cases, purpose-built protocols can be significantly more efficient than general-purpose ones.
+            Efficiency is especially important in anonymous group communication, as anonymization mechanisms such as cover traffic and layered encryptions introduce significant overhead.
+            Thus, my goal is to build specialized protocols that enable anonymous group communication for use cases where it was previously not efficient enough.
+        </li>
+        <li>
+            <b>Anonymous Group Management.</b>
+            An area orthogonal to group communication but equally interesting is group membership management, i.e., enabling users to join and leave groups.
+            As membership management can reveal sensitive information about the group's composition and activity, I investigate how it can be made oblivious to an outside observer.
+        </li>
+    </ul>
+
     <h2>Contact</h2>
     <center>christoph (dot) coijanovic (at) kit (dot) edu <a href="https://search.ca.kit.edu/pubdownload/pem/11018612413569940076268332064">[S/MIME]</a></center> 
 
