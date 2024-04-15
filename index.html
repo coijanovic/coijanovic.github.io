@@ -15,7 +15,6 @@
     <h1>Christoph Coijanovic</h1>
     <p>
     Hi! I am a PhD student at the <a target="_blank" href="https://ps.tm.kit.edu/english/index.php">Chair of IT Security</a> at Karlsruhe Institute of Technology (KIT).
-    Currently, I am visiting <a target="_blank" href="https://appliedcrypto.ethz.ch">Kenny Paterson's group</a> at ETH Zurich.
     </p>
     
     <h2>Research Interests</h2>
@@ -57,25 +56,87 @@
     <center>christoph (dot) coijanovic (at) kit (dot) edu <a href="https://search.ca.kit.edu/pubdownload/pem/11018612413569940076268332064">[S/MIME]</a></center> 
 
     <h2>Publications</h2>
-    <ul>
-        <li>
-            Gaballah, S.A., Coijanovic, C., Strufe, T., & Mühlhäuser, M. "2PPS — Publish/Subscribe with Provable Privacy". SRDS 2021<br>
-            <a href="https://ieeexplore.ieee.org/document/9603453">Paper</a>
-        </li>
-        <li>
-            Coijanovic, C., Weis, C., & Strufe, T. "Panini - Anonymous Anycast and an Instantiation". ESORICS 2023<br>
-            <a href="doc/panini.pdf">Paper</a>&nbsp;<a href="https://arxiv.org/pdf/2305.16629v1.pdf">Extended Paper</a>&nbsp;<a href="doc/panini-slides.pdf">Slides</a>
-        </li>
-        <li>
-            Coijanovic, C., Schadt, D., Weis, C., & Strufe, T. "Bazaar: Anonymous Resource Sharing". WPES 2023<br>
-            <a href="doc/bazaar.pdf">Paper</a>
-        </li>
-        <li>
-            Schadt, D., Coijanovic, C., Weis, C., & Strufe, T. "PolySphinx: Extending the Sphinx Mix Format With Better Multicast Support". To appear at IEEE SP 2024<br>
-            <it>Paper to follow</it>
-        </li>
+        <details>
+            <summary>Gaballah, S.A., Coijanovic, C., Strufe, T., & Mühlhäuser, M. "2PPS — Publish/Subscribe with Provable Privacy". SRDS 2021</summary>
 
-    </ul>
+            <p>
+                    Publish/Subscribe systems like Twitter and Reddit let users communicate with many recipients without requiring prior personal connections. 
+                    The content that participants of these systems publish and subscribe to is typically public, but they may nevertheless wish to remain anonymous. 
+                    While many existing systems allow users to omit explicit identifiers, they do not address the obvious privacy risks of being associated with content that may contain a wide range of sensitive information.
+                    We present 2PPS (Twice-Private Publish-Subscribe), the first pub/sub protocol to deliver strong provable privacy protection for both publishers and subscribers, leveraging Distributed Point Function-based secret sharing for publishing and Private Information Retrieval for subscribing.
+                    2PPS does not require trust in other clients and its privacy guarantees hold as long as even a single honest server participant remains. 
+                    Furthermore, it is scalable and delivers latency suitable for microblogging applications.
+                    A prototype implementation of 2PPS can handle 100,000 concurrent active clients with 5 seconds end-to-end latency and significantly lower bandwidth requirements than comparable
+systems.
+
+            </p>
+                    <p><a href="https://ieeexplore.ieee.org/document/9603453">Paper</a></p>
+        </details>
+
+        <details>
+            <summary>Coijanovic, C., Weis, C., & Strufe, T. "Panini - Anonymous Anycast and an Instantiation". ESORICS 2023</summary>
+
+            <p>
+                    Anycast messaging (i.e., sending a message to an unspecified receiver) has long been neglected by the anonymous communication community. 
+                    An anonymous anycast prevents senders from learning who the receiver of their message is, allowing for greater privacy in areas such as political activism and whistleblowing. 
+                    While there have been some protocol ideas proposed, formal treatment of the problem is absent. 
+                    Formal definitions of what constitutes anonymous anycast and privacy in this context are however a requirement for constructing protocols with provable guarantees. 
+                    In this work, we define the anycast functionality and use a game-based approach to formalize its privacy and security goals. 
+                    We further propose Panini, the first anonymous anycast protocol that only requires readily available infrastructure. 
+                    We show that Panini allows the actual receiver of the anycast message to remain anonymous, even in the presence of an honest but curious sender. 
+                    In an empirical evaluation, we find that Panini adds only minimal overhead over regular unicast: 
+                    Sending a message anonymously to one of eight possible receivers results in an end-to-end latency of 0.76s.
+            </p>
+
+            <p><a href="doc/panini.pdf">Paper</a>&nbsp;<a href="https://arxiv.org/pdf/2305.16629v1.pdf">Extended Paper</a>&nbsp;<a href="doc/panini-slides.pdf">Slides</a></p>
+        </details>
+
+
+        <details>
+            <summary>Coijanovic, C., Schadt, D., Weis, C., & Strufe, T. "Bazaar: Anonymous Resource Sharing". WPES 2023</summary>
+
+            <p>
+                In areas such as manufacturing or logistics, it is beneficial for everyone to share access capacity with others. 
+                Increased efficiency increases profits, lowers prices for consumers, and reduces environmental impact. 
+                However, in order to share a resource such as manufacturing capacity, suitable partners must be found. 
+                Ideally, a centralized exchange is used to find partners, but this comes with privacy risks. 
+                Since participants in the exchange are competitors, they can use information about someone else's capacity to their disadvantage, e.g., by undercutting the prices of an already poorly performing competitor to drive it out of business. 
+                In this paper, we show that such an exchange can be set up without compromising the privacy of its participants. 
+                We formalize privacy goals in the context of resource sharing via an indistinguishability game. 
+                We also propose Bazaar, a protocol that allows participants to find suitable matches while satisfying our formal privacy goals.
+            </p>
+
+            <p><a href="doc/bazaar.pdf">Paper</a></p>
+        </details>
+
+
+        <details>
+            <summary>Schadt, D., Coijanovic, C., Weis, C., & Strufe, T. "PolySphinx: Extending the Sphinx Mix Format With Better Multicast Support". To appear at IEEE SP 2024</summary>
+
+            <p>
+                Mix networks are a well-known technique to hide communication metadata, but incur a high overhead especially in group communication settings.
+                This hinders their adoption in real-world usage, as group communication makes up a big part of modern communication patterns.
+                In this paper, we introduce PolySphinx, a mix format that is a step towards efficient anonymous multicasting and allows a mix node to replicate the message payload to multiple recipients.
+                We prove that PolySphinx does not compromise on the anonymity offered to users, while considerably reducing the latency of group messages:
+                In a group with 25 members, the average latency drops from 6.1 s using the state-of-the-art Rollercoaster approach to 4.1 s using PolySphinx.
+            </p>
+
+            <p><it>Paper to follow</it></p>
+        </details>
+
+        <details>
+            <summary>Coijanovic, C., Stark, A., Schadt, D., & Strufe, T. "Pirates: Anonymous Group Calls Over Fully Untrusted Infrastructure". To appear at ACIPS 2024</summary>
+
+            <p>
+                Anonymous metadata-private voice call protocols suffer from high delays and so far cannot provide group call functionality.
+                Anonymization inherently yields delay penalties, and scaling signalling and communication to groups of users exacerbates this situation.
+                Our protocol Pirates employs PIR, improves parallelization and signalling, and is the first group voice call protocol that guarantees the strong anonymity notion of communication unobservability.
+                Implementing and measuring a prototype, we show that Pirates with a single server can support group calls with three group members from an 11 concurrent users with mouth-to-ear latency below 365ms, meeting minimum ITU requirements as the first anonymous voice call system.
+                Increasing the number of servers enables bigger group sizes and more participants.
+            </p>
+
+            <p><it>Paper to follow</it></p>
+        </details>
 
     <h2>Curriculum Vitae</h2>
     <table>
