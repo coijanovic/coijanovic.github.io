@@ -17,6 +17,10 @@ a:hover {
 details {
   padding: 0.5em;
 }
+.hint {
+    color: gray;
+    font-style: italic
+}
 table td {
     padding: 10px;
 }
