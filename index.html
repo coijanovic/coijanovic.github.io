@@ -133,6 +133,25 @@ systems.
             <p><a href="https://doi.org/10.1007/978-981-97-5101-3_11">Paper</a>&nbsp;<a href="https://arxiv.org/pdf/2404.09095.pdf">Extended Paper</a>&nbsp;<a href="https://github.com/kit-ps/pirates">Code</a></p>
         </details>
 
+        <details>
+            <summary>Schadt, D., Coijanovic, C., & Strufe, T. "Aimless Onions: Mixing without Topology Information". To appear in PoPETs 2025.4</summary>
+
+            <p>
+                Mix networks allow communication with strong anonymity guarantees.
+                In theory, mix networks can scale indefinitely, as additional nodes can be added to the network to support new users.
+                However, one factor that limits scalability in current designs is the need for all clients to know both the identity and the key of every available mix node.
+
+                In circuit-based onion routing, a mechanism that does not require this knowledge to be globally available exists, but it relies on the interactivity of the circuit construction to keep its security guarantees.
+                We therefore set out to investigate whether we can transfer such a mechanism to the context of message-based mix networks.
+
+                In this paper, we propose Aimless Onions, the first mix format that enables clients to create onions in a mix network without knowing which nodes are available.
+                Rather than downloading topology information, clients only need to acquire constant-size public parameters.
+                Thus, Aimless Onions overcomes an important scalability limitation in mix networks, while retaining the same security guarantees as the state of the art.
+                Using Aimless Onions, clients sending 25 messages per hour save 74% of bandwidth compared to using Spinx packets and topology information download, even at today's network sizes.
+            </p>
+
+            <p><i>Paper to follow.</i></p>
+        </details>
     <h2>Talks</h2>
         <details>
             <summary>"Privacy Proofs for Anonymous Communication Networks". ProTeCs @ EuroCrypt 2025</summary>
